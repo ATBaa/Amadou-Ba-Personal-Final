@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+
+    <style>
+      body {
+        background-color: green;
+        font-family: Arial, sans-serif;
+      }
+
+      img {
+        transition: transform 1s ease;
+      }
+
+      img:hover {
+        transform: rotate(360deg);
+      }
+
+      .navbar a {
+        margin-right: 15px;
+        text-decoration: none;
+        color: black;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+
+      .navbar a:hover {
+        background-color: white;
+        box-shadow: 0 0 10px white;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>My Website</h1>
+
+    <!-- Added id so JavaScript can target it -->
+    <img id="profilePic" src="Photo-of-me.jpg" alt="Photo of me" width="500" height="600">
+
+    <p>If you want to know more about me and what I stand for, click these links:</p>
+
+    <div class="navbar">
+      <a href="hobbies.html">Hobbies</a>
+      <a href="causes.html">Causes</a>
+      <a href="favorites.html">Favorites</a>
+      <a href-"Contact.html">Contacts</a>
+    </div>
+
+    <!-- JAVASCRIPT GOES HERE -->
+    <script>
+      const img = document.getElementById("profilePic");
+
+      img.addEventListener("click", () => {
+        img.style.transform = "rotate(360deg)";
+        setTimeout(() => {
+          img.style.transform = "";
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
